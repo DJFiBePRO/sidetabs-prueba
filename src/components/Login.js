@@ -22,9 +22,9 @@ class Login extends Component {
 
   login(response) {
     if (response.accessToken) {
-      console.log("login", response.profileObj); //
-
-      this.props.download(true);
+      console.log("login", response.profileObj);
+      const {email, familyName, givenName} = response.profileObj
+      this.props.authUser(true, {email, familyName, givenName});
 
       this.setState((state) => ({
         isLogined: true,
@@ -35,7 +35,7 @@ class Login extends Component {
   }
 
   logout(response) {
-    this.props.download(false);
+    this.props.authUser(false);
     this.setState((state) => ({
       isLogined: false,
       accessToken: "",
@@ -117,11 +117,12 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  download(isLogin) {
+  authUser(isLogin, payload) {
     if (isLogin) {
       console.log("Debería agregar");
       dispatch({
         type: "LOGIN",
+        payload
       });
     } else {
       console.log("Debería quitar");

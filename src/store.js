@@ -132,11 +132,17 @@ export const Capas = [
 const capaFaltante = {
   id: "3",
   x: "-76.934252",
-  y: "0.303065",
+  y: "-0.303065",
   nombreCapa: "Lago San Pedro",
 };
 const initialStore = {
   isLogin: false,
+  // profile: {
+  //   email: null,
+  //   givenName: null,
+  //   familyName: null,
+  // },
+  profile: null,
   capas: Capas,
   capasPorMostrar: Capas,
   capasMostradas: [],
@@ -196,15 +202,16 @@ const reducerUser = (state = initialStore, action) => {
     return {
       ...state,
       isLogin: true,
+      profile:{...action.payload}
     };
   }
   if (action.type === "LOGOUT") {
     return {
       ...state,
       isLogin: false,
+      profile: null
     };
   }
-
   return state;
 };
 export default createStore(reducerUser);

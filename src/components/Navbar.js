@@ -1,10 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import Login from "./Login";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 //import "./NavBar.css";
 
 const NavBar = () => {
+
+  const { pathname } = useLocation();
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light bg-success nav-hot-fix"
@@ -39,12 +42,21 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="me-auto mb-lg-0 bg-warning btn btn-outline-success me-2" to="/datos">
+                <Link
+                  className={`me-auto mb-lg-0 btn btn-outline-success me-2 ${pathname.split("/")[1] === "datos"? "active bg-secondary":"bg-warning"}`}
+                  to="/datos"
+                >
                   Datos
+                </Link>
+                <Link
+                  className={`me-auto mb-lg-0 btn btn-outline-success me-2 ${pathname.split("/")[1] === "mapa"? "active bg-secondary":"bg-warning"}`}
+                  to="/mapa"
+                >
+                  Mapa
                 </Link>
               </li>
               <li className="nav-item">
-                <Login className="nav-link active" />
+                <Login className="nav-link" />
               </li>
             </ul>
           </div>

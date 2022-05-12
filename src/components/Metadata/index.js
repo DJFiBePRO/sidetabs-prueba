@@ -1,4 +1,4 @@
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -10,11 +10,15 @@ import { Capas } from "../../store.js";
 import Error from "../Error/error.js";
 
 const LandingViewMetaData = () => {
+
   let { id } = useParams();
   const [capa, setCapa] = useState(null)
   console.log("id:", id);
   console.log("Capa:", Capas["id"]);
   console.log("Capas:", Capas);
+
+  const profile = useSelector(state => state.profile)
+  console.log("PROFILE", profile)
 
   /* 
     []
@@ -42,12 +46,12 @@ const LandingViewMetaData = () => {
       <Layout>
         {id && capa ? (
           <>
-              <InformationBlock 
-                img={landing.block_2.image}
-                altImg={landing.block_2.altImg}
-                title={capa.nombreCapa}
-                text={capa.metadata}
-              />
+            <InformationBlock 
+              img={landing.block_2.image}
+              altImg={landing.block_2.altImg}
+              title={capa.nombreCapa}
+              text={capa.metadata}
+            />
             <BtnDownload />
           </>
         ) : (
