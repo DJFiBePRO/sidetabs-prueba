@@ -51,7 +51,7 @@ const BtnDownload = (props) => {
     if(!profile) return setCanDownload(1);
     console.log("request",profile);
     try {
-      const res = await fetch(`http://localhost:2000/users?email=${profile.email}`);
+      const res = await fetch(`http://patfa.site:3000/users?email=${profile.email}`);  
       const {exists} = await res.json();
       console.log("EXISTE EN BASE DE DATOS?", exists);
       if(!exists) return setCanDownload(2);
