@@ -106,7 +106,7 @@ const Formulario = ({ refresh }) => {
 									console.log("Valores:", valores);
 									try {
 										const resp = await axios.post(
-											"http://localhost:2000/formulario",
+											"http://patfa.site:2000/formulario",
 											{ valores }
 										);
 										alert("Usuario registrado con éxito");
