@@ -5,12 +5,12 @@ export const landing = {
         title: 'Plataforma Informática de Alertas',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta harum vitae ab vel quis accusantium autem quasi consequatur fuga repellat, esse vero id quos soluta. Porro fuga reprehenderit quia?'
     },
-    /*block_2: {
+    block_2: {
         image: '/img/pafta2.png',
         altImg: 'PaftaMegadata',
         title: 'Megadata de la Plataforma Informática de Alertas',
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta harum vitae ab vel quis accusantium autem quasi consequatur fuga repellat, esse vero id quos soluta. Porro fuga reprehenderit quia?'
-    }*/
+    }
     /*block_3: {
         image: '/src/img/estudio.svg',
         altImg: 'retroalimentacion real y personalizada',
