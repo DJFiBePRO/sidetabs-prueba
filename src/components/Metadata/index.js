@@ -42,7 +42,7 @@ const LandingViewMetaData = () => {
   }, [id])
   
   return (
-    <div style={{ background: "#fff" }}>
+    <div style={{ background: "#fff" }} >
       <Layout>
         {id && capa ? (
           <>

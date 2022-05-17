@@ -7,7 +7,7 @@ const LandingView = () => {
     return (
         <div className="" style={{ background: "#fff" }}>
             <Layout>
-                <InformationBlock img={landing.block_1.image} altImg={landing.block_1.altImg} title={landing.block_1.title} text={landing.block_1.text} />
+                <InformationBlock img={landing.block_1.image} altImg={landing.block_1.altImg} title={landing.block_1.title} text={landing.block_1.text} text1={landing.block_1.text1} />
                 <div className="" />
                 <DescribeSection />
             </Layout>

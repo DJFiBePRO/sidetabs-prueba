@@ -1,5 +1,4 @@
-import Footer from "./footer";
-
+import Footer from "../../Landing/components/footer";
 
 const Layout = ({ children }) => (
   <>

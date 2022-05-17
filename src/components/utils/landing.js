@@ -3,13 +3,14 @@ export const landing = {
         image: '/img/pafta.png',
         altImg: 'Pafta',
         title: 'Plataforma Informática de Alertas',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta harum vitae ab vel quis accusantium autem quasi consequatur fuga repellat, esse vero id quos soluta. Porro fuga reprehenderit quia?'
+        text: 'El presente proyecto de investigación tiene como objetivo mejorar el proceso productivo y prevención de plagas, mediante la implementación de una plataforma informática de alertas tempranas fitosanitarias agrícolas enfocadas en primera instancia a una de las enfermedades que más afecta a este cultivo como es el caso de la Monilla (Moniliophthora roreri). El proyecto cuenta con el trabajo en conjunto entre docentes investigadores, especialistas, pasantes y estudiantes de la ESPOCH, UNACH, MAG, INIAP así también, junto con los productores del cantón.',
+        text1:'La plataforma estará constituida por cuatro componentes: red de estaciones meteorológicas, modelos predictivos, sistemas de información geográfica – teledetección y un portal web que funcionarán articuladamente para procesar los datos y presentar la información que estará a disposición de investigadores, productores, instituciones gubernamentales y demás interesados. Adicionalmente, permitirá alertar a los productores sobre posibles riesgos de plagas o enfermedades, así como la provisión de información (manuales, mapas temáticos, entre otros) para prevenir o remediar estas con procedimientos actuales y en base a estándares y buenas prácticas.'
     },
     block_2: {
         image: '/img/pafta2.png',
         altImg: 'PaftaMegadata',
         title: 'Megadata de la Plataforma Informática de Alertas',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta harum vitae ab vel quis accusantium autem quasi consequatur fuga repellat, esse vero id quos soluta. Porro fuga reprehenderit quia?'
+        text: ''
     }
     /*block_3: {
         image: '/src/img/estudio.svg',
