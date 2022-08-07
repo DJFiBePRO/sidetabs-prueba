@@ -10,7 +10,7 @@ const Tabla = ({estaciones,highlight}) => {
                 <th>Estudio</th>
                 <th>Cantidad de datos registrados</th>
                 <th>Promedio % de afectación</th>
-                <th>Máximo % de afectación</th>
+                {/* <th>Máximo % de afectación</th> */}
             </tr>
             </thead>
             <tbody>
@@ -20,8 +20,8 @@ const Tabla = ({estaciones,highlight}) => {
                             <td scope="row">{etc.parroquia}</td>
                             <td>{etc.nombreEstudio}</td>
                             <td>{etc.count}</td>
-                            <td>{etc.avg}</td>
-                            <td>{etc.max}</td>
+                            <td>{parseFloat(etc.avg).toFixed(2)}</td>
+                            {/* <td>{etc.max}</td> */}
                         </tr>
                     )
                 })}
