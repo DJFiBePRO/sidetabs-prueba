@@ -13,7 +13,7 @@ const Capa2 = ({ capa }) => {
 
   const getWfs = async () => {
     const value = await fetch(
-      `http://patfa.site:8080/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=${capa.layers}&outputFormat=application/json&SRSNAME=EPSG:4326`
+      `http://patfa.espoch.edu.ec:8080/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=${capa.layers}&outputFormat=application/json&SRSNAME=EPSG:4326`
     );
 
     const data = await value.json();
