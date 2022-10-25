@@ -1,7 +1,8 @@
 import { createStore } from "redux";
-const capaUrlWMS = "http://patfa.site:8080/geoserver/wms"; //servicio de consumo para host
+const urlBackend="patfa.espoch.edu.ec:8080";
+const capaUrlWMS = "http://$urlBackend/geoserver/wms"; //servicio de consumo para host
 // const capaUrl2WMS = "http://localhost:62240/geoserver/wms"; //servicio de consmo para los clientes invitados
-const capaUrlWFS = "http://patfa.site:8080/geoserver/wfs"; //servicio de consumo para host
+const capaUrlWFS = "http://$urlBackend/geoserver/wfs"; //servicio de consumo para host
 // const capaUrl2WFS = "http://localhost:62240/geoserver/wfs"; //servicio de consmo para los clientes invitados
 //const capaUrl3 = "http://192.168.1.2:80{{ 80/g }}eoserver/wfs"; //servicio de consmo para los clientes invitados
 
