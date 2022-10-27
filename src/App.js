@@ -10,6 +10,7 @@ import Datos from "./components/Datos";
 import Error from "./components/Error/error";
 import { Provider } from "react-redux";
 import store from "./store";
+import { confs} from "./urls";
 import "./styles.scss";
 
 
@@ -19,7 +20,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <Router basename={"/sig"}> {/* subruta de la página */}
+      <Router basename={confs.subruta}> {/* subruta de la página */}
         <div className="App">
           <Navbar />
           <Switch>

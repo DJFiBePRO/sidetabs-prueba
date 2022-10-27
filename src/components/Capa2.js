@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Marker, Popup, GeoJSON, Tooltip } from "react-leaflet";
 import ReactDOMServer from 'react-dom/server';
 import L from "leaflet";
-import { urls } from "../urls";
+import { confs } from "../urls";
 
 const Capa2 = ({ capa }) => {
   const [geoJson, setGeoJson] = useState(null);
@@ -14,7 +14,7 @@ const Capa2 = ({ capa }) => {
 
   const getWfs = async () => {
     const value = await fetch(
-      `${urls.urlGeoserv}:${urls.portGeoserv}/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=${capa.layers}&outputFormat=application/json&SRSNAME=EPSG:4326`
+      `${confs.urlGeoserv}:${confs.portGeoserv}/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=${capa.layers}&outputFormat=application/json&SRSNAME=EPSG:4326`
     );
 
     const data = await value.json();

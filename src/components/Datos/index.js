@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Mapa from "./mapa";
 import Tabla from "./tabla";
-import { urls } from "../../urls";
+import { confs } from "../../urls";
 
 /* 
     datosScreen
@@ -31,7 +31,7 @@ const Datos = () => {
 			console.log("FECI", feci);
 			console.log("FECF", fecf);
 			const res = await fetch(
-				`${urls.urlDatos}:${urls.portDatos}/estaciones?feci=${feci}&fecf=${fecf}`
+				`${confs.urlDatos}:${confs.portDatos}/estaciones?feci=${feci}&fecf=${fecf}`
 			);
 			const data = await res.json();
 			console.log("RES", data);

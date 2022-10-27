@@ -1,13 +1,14 @@
+import { confs } from "../../urls";
 export const landing = {
 	block_1: {
-		image: "/img/pafta.png",
+		image: `${confs.subruta}/img/pafta.png`,
 		altImg: "Pafta",
 		title: "Plataforma Informática de Alertas",
 		text: "Este proyecto tiene por objetivo mejorar la productividad y prevención de plagas mediante la implementación de una plataforma informática de alertas tempranas fitosanitarias, enfocadas inicialmente en la monilla (monoliophtora roreri), una de las plagas más frecuentes en las plantaciones de cacao; desarrollado como un trabajo articulado entre docentes investigadores, especialistas y estudiantes de la Escuela Superior Politécnica de Chimborazo, Universidad Nacional de Chimborazo, Ministerio de Agricultura y Ganadería, Instituto Nacional de Investigaciones Agropecuarias de Ecuador y productores locales.",
 		text1: "La plataforma estará constituida por cuatro componentes: red de estaciones meteorológicas, modelos predictivos, sistemas de información geográfica – teledetección y un portal web que funcionarán articuladamente para procesar los datos y presentar la información que estará a disposición de investigadores, productores, instituciones gubernamentales y demás interesados. Adicionalmente, permitirá alertar a los productores sobre posibles riesgos de plagas o enfermedades, así como la provisión de información (manuales, mapas temáticos, entre otros) para prevenir o remediar estas con procedimientos actuales y en base a estándares y buenas prácticas.",
 	},
 	block_2: {
-		image: "/img/pafta2.png",
+		image: `${confs.subruta}/img/pafta2.png`,
 		altImg: "PaftaMegadata",
 		title: "Megadata de la Plataforma Informática de Alertas",
 		text: "",
