@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Mapa from "./mapa";
 import Tabla from "./tabla";
+import { urls } from "../../urls";
 
 /* 
     datosScreen
@@ -21,7 +22,7 @@ const Datos = () => {
 
 	// queries (fechas)
 	const [feci, setFeci] = useState("2021-04-01");
-	const [fecf, setFecf] = useState("2022-04-01");
+	const [fecf, setFecf] = useState("2022-10-01");
 
 	// petición al endpoint
 	const getSeveridad = async () => {
@@ -30,7 +31,7 @@ const Datos = () => {
 			console.log("FECI", feci);
 			console.log("FECF", fecf);
 			const res = await fetch(
-				`http://patfa.espoch.edu.ec:4000/estaciones?feci=${feci}&fecf=${fecf}`
+				`${urls.urlDatos}:${urls.portDatos}/estaciones?feci=${feci}&fecf=${fecf}`
 			);
 			const data = await res.json();
 			console.log("RES", data);
