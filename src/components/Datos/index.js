@@ -30,7 +30,7 @@ const Datos = () => {
 			console.log("FECI", feci);
 			console.log("FECF", fecf);
 			const res = await fetch(
-				`http://patfa.site:3000/estaciones?feci=${feci}&fecf=${fecf}`
+				`http://patfa.espoch.edu.ec:4000/estaciones?feci=${feci}&fecf=${fecf}`
 			);
 			const data = await res.json();
 			console.log("RES", data);

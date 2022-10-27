@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={"/sig"}> {/* subruta de la página */}
         <div className="App">
           <Navbar />
           <Switch>
