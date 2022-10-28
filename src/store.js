@@ -1,16 +1,12 @@
 import { createStore } from "redux";
-const urlBackend="patfa.espoch.edu.ec:8080";
-const capaUrlWMS = "http://patfa.espoch.edu.ec:8080/geoserver/wms"; //servicio de consumo para host
-// const capaUrl2WMS = "http://localhost:62240/geoserver/wms"; //servicio de consmo para los clientes invitados
-const capaUrlWFS = "http://patfa.espoch.edu.ec:8080/geoserver/wfs"; //servicio de consumo para host
-// const capaUrl2WFS = "http://localhost:62240/geoserver/wfs"; //servicio de consmo para los clientes invitados
-//const capaUrl3 = "http://192.168.1.2:80{{ 80/g }}eoserver/wfs"; //servicio de consmo para los clientes invitados
+import { confs } from "../src/urls";
 
-var urlParte2 = "?service=wfs&version=2.0.0&request=GetFeature&typeNames=";
-var urlParte4 = "&outputFormat=application/json";
+const subRutaGeoserver = "geoserver"; //subruta de geoserver
+const urlBackend = `${confs.urlGeoserv}:${confs.portGeoserv}/${subRutaGeoserver}`;
 
-// /metadata/2
-// http://patfa.site:8080/geoserver/wfs?service=wfs&version=2.0.0&request=GetFeature&typeNames=patfa:zona2&outputFormat=application/json
+const capaUrlWMS = `${urlBackend}/wms`; //servicio de consumo para host
+const capaUrlWFS = `${urlBackend}/wfs`; //servicio de consumo para host
+
 export const Capas = [
 	{
 		id: "1000",

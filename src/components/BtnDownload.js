@@ -17,13 +17,11 @@ const BtnDownload = (props) => {
 
 	const handleDownloadDoc = (fileName) => (e) => {
 		let urlParte1;
-		let urlParte1a;
 		let urlParte2 =
 			"?service=wfs&version=2.0.0&request=GetFeature&typeNames=";
 		let urlParte3;
 		let urlParte4 = "&outputFormat=shape-zip";
 		let urlFinal;
-		let urlFinal2;
 		let idURL = window.location.pathname;
 		// idUrl = "/metadata/8"
 		idURL = idURL.replace("/metadata/", "");
@@ -33,14 +31,11 @@ const BtnDownload = (props) => {
 		for (const capa of props.capas) {
 			if (capa.id === idURL) {
 				urlParte1 = capa.urlWFS;
-				urlParte1a = capa.urla;
 				urlParte3 = capa.layers;
 			}
 		}
 		urlFinal = urlParte1 + urlParte2 + urlParte3 + urlParte4; //Dir archivo de descarga
-		urlFinal2 = urlParte1a + urlParte2 + urlParte3 + urlParte4; //Dir archivo de descarga visitante
 		console.log("Final1: " + urlFinal);
-		console.log("Final2: " + urlFinal2);
 		// Downloads the file
 		let link = document.createElement("a");
 		link.href = urlFinal; //direccion en la que se encuentra el archivo
