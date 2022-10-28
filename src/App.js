@@ -10,46 +10,53 @@ import Datos from "./components/Datos";
 import Error from "./components/Error/error";
 import { Provider } from "react-redux";
 import store from "./store";
-import { confs} from "./urls";
+import { confs } from "./urls";
 import "./styles.scss";
 
-
-
 export default function App() {
-  const [map, setMap] = useState(null);
+	const [map, setMap] = useState(null);
 
-  return (
-    <Provider store={store}>
-      <Router basename={confs.subruta}> {/* subruta de la página */}
-        <div className="App">
-          <Navbar />
-          <Switch>
-            <Route path="/" exact>
-              <LandingView />
-            </Route>
-            <Route path="/mapa" exact>
-              {map && <Sidebar map={map} />}
-              <Map setMap={setMap} />
-            </Route>
-            <Route path="/metadata/:id">
-              <LandingViewMetaData />
-            </Route>
-            <Route path="/datos" exact>
-              {/* Mapa temático */}
-              <Datos/>
-            </Route>
-            <Route path="/form" exact>
-              <Form />
-            </Route>
-            {/* not match route */}
-            <Route path="*">
-              <div style={{display:"flex", alignItems:"center", justifyContent:"center", height:"75%"}}>
-                <Error/>
-              </div>
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </Provider>
-  );
+	return (
+		<Provider store={store}>
+			<Router basename={confs.subruta}>
+				{" "}
+				{/* subruta de la página */}
+				<div className="App">
+					<Navbar />
+					<Switch>
+						<Route path="/" exact>
+							<LandingView />
+						</Route>
+						<Route path="/mapa" exact>
+							{map && <Sidebar map={map} />}
+							<Map setMap={setMap} />
+						</Route>
+						<Route path="/metadata/:id">
+							<LandingViewMetaData />
+						</Route>
+						<Route path="/datos" exact>
+							{/* Mapa temático */}
+							<Datos />
+						</Route>
+						<Route path="/form" exact>
+							<Form />
+						</Route>
+						{/* not match route */}
+						<Route path="*">
+							<div
+								style={{
+									display: "flex",
+									alignItems: "center",
+									justifyContent: "center",
+									height: "75%",
+								}}
+							>
+								<Error />
+							</div>
+						</Route>
+					</Switch>
+				</div>
+			</Router>
+		</Provider>
+	);
 }
