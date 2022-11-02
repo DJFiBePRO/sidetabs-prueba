@@ -14,7 +14,7 @@ const LandingViewMetaData = () => {
   let { id } = useParams();
   const [capa, setCapa] = useState(null)
   console.log("id:", id);
-  console.log("Capa:", Capas["id"]);
+  console.log("Capa:", Capas[id]);
   console.log("Capas:", Capas);
 
   const profile = useSelector(state => state.profile)

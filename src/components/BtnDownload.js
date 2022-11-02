@@ -24,7 +24,7 @@ const BtnDownload = (props) => {
 		let urlFinal;
 		let idURL = window.location.pathname;
 		// idUrl = "/metadata/8"
-		idURL = idURL.replace("/metadata/", "");
+		idURL = idURL.replace(`${confs.subruta}/metadata/`, "");
 		// idUrl = "8"
 
 		// Asigna la direccion de cada archivo
@@ -32,6 +32,7 @@ const BtnDownload = (props) => {
 			if (capa.id === idURL) {
 				urlParte1 = capa.urlWFS;
 				urlParte3 = capa.layers;
+				console.log("Estoy en el if");
 			}
 		}
 		urlFinal = urlParte1 + urlParte2 + urlParte3 + urlParte4; //Dir archivo de descarga
@@ -39,7 +40,7 @@ const BtnDownload = (props) => {
 		// Downloads the file
 		let link = document.createElement("a");
 		link.href = urlFinal; //direccion en la que se encuentra el archivo
-		link.click();
+		link.click();//ESTO RECARGA LOS LOGS
 		URL.revokeObjectURL(link.href);
 	};
 

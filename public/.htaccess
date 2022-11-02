@@ -2,4 +2,4 @@ FallbackResource ./index.html
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [L]
+RewriteRule ^ /index.html [L]

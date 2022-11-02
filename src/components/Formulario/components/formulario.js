@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useSelector } from "react-redux";
 import Warning from "../../Warning/warning";
+import { confs } from "../../../urls";
 
 import axios from "axios";
 
@@ -106,7 +107,7 @@ const Formulario = ({ refresh }) => {
 									console.log("Valores:", valores);
 									try {
 										const resp = await axios.post(
-											"http://patfa.site:3000/formulario",
+											`${confs.urlDatos}:${confs.portDatos}/formulario`,
 											{ valores }
 										);
 										alert("Usuario registrado con éxito");
